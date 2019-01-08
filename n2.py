@@ -37,4 +37,4 @@ listC = []
 for i in range(len(listA)):
     listC.append(listA[i]+listB[i])
 
-print('listC 平均數:',np.mean(listB))
+print('listC 平均數:',np.mean(listC))
