@@ -1,0 +1,27 @@
+import pandas as pd
+
+minder = pd.read_csv('gapminder.csv')
+print('內容')
+print(minder)
+print('長度',minder.index)
+print('形狀',minder.shape)
+print('維度',minder.ndim)
+
+
+print('前五筆資料:')
+print(minder.head())
+print('後五筆資料:')
+print(minder.tail())
+print('分別輸出第 0 列、第四列的所有資料:')
+print(minder.iloc[[0]])
+print(minder.iloc[[4]])
+print('別輸出第 0 行:')
+print(minder.iloc[:,0])
+print('第二行的所有資料:')
+print(minder.iloc[:,2])
+print('輸出前 30 筆的第三行所有資料:')
+print(minder.iloc[:,3].head(30))
+print('輸出篩選條件為國家為貝南、地區為非洲且年份是1972 或是 1957 的所有資料 :')
+print(minder[(minder['country'] == 'Benin') & (minder['continent'] == 'Africa') & ((minder['year'] == 1972) | (minder['year'] == 1957))])
+print('輸出篩選條件為含有 A 開頭國家的所有資料:')
+print(minder[(minder['country'] < 'B') ])
